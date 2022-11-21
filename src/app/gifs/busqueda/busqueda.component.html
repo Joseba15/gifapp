@@ -1,6 +1,7 @@
 <h5>Buscar:</h5>
-<input (keyUp.enter)="buscarGifs()"
-    [[(ngModel)]="query"]
+<input (keyUp.enter)="addBusqueda()"
+    name="query"
+    [(ngModel)]="query"
     type="text"
     class="form-control"
     placeholder="Buscar gifs..."

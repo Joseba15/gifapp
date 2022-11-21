@@ -7,12 +7,13 @@ import { GifsSService } from '../services/gifs-service.service';
 })
 export class BusquedaComponent {
 
-  constructor(private service :GifsSService) { }
+  constructor(private   gifsService :GifsSService) { }
 
   query: string="";
 
 
   addBusqueda(){
-    this.service.buscarGifs()
+    this.gifsService.buscarGifs(this.query);
+    this.query='';
   }
 }
